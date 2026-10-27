@@ -1,156 +1,92 @@
 <!DOCTYPE html>
 <html>
 <head>
-  <meta charset="UTF-8">
-  <title>shreyash's corner</title>
+  <title>Shreyash's Site</title>
   <style>
-    * {
-      box-sizing: border-box;
-      margin: 0;
-      padding: 0;
-    }
-
     body {
-      background-color: #f4efe6;
-      color: #2b2523;
-      font-family: 'Courier New', Courier, monospace;
-      padding: 30px 15px;
-      line-height: 1.6;
-    }
-
-    .container {
-      max-width: 650px;
-      margin: 0 auto;
-      background: #ffffff;
-      border: 3px solid #2b2523;
-      box-shadow: 6px 6px 0px #2b2523;
-      padding: 24px;
-    }
-
-    header {
-      border-bottom: 2px dashed #2b2523;
-      padding-bottom: 14px;
-      margin-bottom: 20px;
+      background-color: #f7f7f7;
+      font-family: sans-serif;
+      margin: 40px auto;
+      max-width: 550px;
+      padding: 0 15px;
+      color: #222;
     }
 
     h1 {
-      font-size: 26px;
-      letter-spacing: -1px;
+      font-size: 24px;
+      margin-bottom: 5px;
     }
 
-    .tagline {
-      font-size: 13px;
-      color: #776e65;
-      margin-top: 4px;
+    .sub {
+      color: #666;
+      font-size: 14px;
+      margin-bottom: 20px;
+    }
+
+    hr {
+      border: none;
+      border-top: 1px solid #ccc;
+      margin: 20px 0;
     }
 
     h2 {
-      font-size: 18px;
-      margin: 22px 0 10px 0;
-      background: #fbeee0;
-      padding: 3px 6px;
-      display: inline-block;
-      border: 1px solid #2b2523;
+      font-size: 16px;
+      margin-top: 20px;
     }
 
-    p {
-      margin-bottom: 12px;
+    p, li {
       font-size: 14px;
+      line-height: 1.5;
     }
 
     ul {
-      margin-left: 22px;
-      margin-bottom: 14px;
-      font-size: 14px;
+      padding-left: 20px;
     }
 
-    li {
-      margin-bottom: 6px;
-    }
-
-    .status {
-      display: inline-block;
-      background: #c8e6c9;
-      color: #256029;
-      border: 1px solid #256029;
-      padding: 2px 8px;
-      font-size: 12px;
-      font-weight: bold;
+    .project {
+      margin-bottom: 12px;
     }
 
     button {
-      background: #2b2523;
-      color: #fff;
-      font-family: inherit;
-      border: 2px solid #2b2523;
-      padding: 8px 14px;
+      margin-top: 10px;
+      padding: 6px 12px;
+      font-size: 13px;
       cursor: pointer;
-      font-size: 13px;
-      margin-top: 6px;
-    }
-
-    button:hover {
-      background: #ffffff;
-      color: #2b2523;
-    }
-
-    #quote {
-      margin-top: 8px;
-      font-style: italic;
-      color: #554e47;
-      font-size: 13px;
     }
   </style>
 </head>
 <body>
 
-  <div class="container">
-    
-    <header>
-      <h1>hey, i'm shreyash</h1>
-      <p class="tagline">10th grader @ DPS E-City, Bengaluru - tinkerer and hacker</p>
-      <div style="margin-top: 8px;">
-        <span class="status">status: tinkering with IoT and circuits</span>
-      </div>
-    </header>
+  <h1>Shreyash Sah</h1>
+  <p class="sub">10th grade student at DPS Electronic City, Bangalore</p>
 
-    <section>
-      <h2>about me</h2>
-      <p>
-        I'm in 10th grade. When I'm not studying for science or social science, I'm usually hacking on hardware, messing around with microcontrollers, or playing volleyball for Ganga house.
-      </p>
-    </section>
+  <hr>
 
-    <section>
-      <h2>things i build and do</h2>
-      <ul>
-        <li><strong>Hack Club "Blueprint":</strong> lead organizer for our community technical event.</li>
-        <li><strong>IoT and Electronics:</strong> building automated sensor setups with ESP32 / Arduino.</li>
-        <li><strong>Reading:</strong> won Rank 1 in the NIE Read India Championship (two years in a row).</li>
-        <li><strong>Sports:</strong> 1st place in inter-house volleyball and cricket tournaments.</li>
-      </ul>
-    </section>
+  <h2>About Me</h2>
+  <p>I am in grade 10 and interested in electronics, IoT boards, and programming. Outside classes, I play volleyball and cricket for Ganga house.</p>
 
-    <section>
-      <h2>quick interactive button</h2>
-      <p>I wrote a short JavaScript function just to make this button do something:</p>
-      <button onclick="revealFact()">click for a random fact</button>
-      <p id="quote"></p>
-    </section>
-
+  <h2>Things I Work On</h2>
+  <div class="project">
+    <p><strong>Hack Club Blueprint:</strong> I helped organize our community's Blueprint technical event for other students.</p>
+  </div>
+  <div class="project">
+    <p><strong>Hardware & IoT:</strong> I like wiring sensor setups using ESP32 and Arduino boards to test automated circuits.</p>
+  </div>
+  <div class="project">
+    <p><strong>Competitions:</strong> Won Rank 1 in the NIE Read India Championship twice.</p>
   </div>
 
-  <script>
-    const facts = [
-      "My favourite boba flavour is classic brown sugar milk tea.",
-      "I plan to take the Science stream in 11th grade.",
-      "I love debugging ESP32 serial logs when circuits act weird.",
-      "Volleyball match pressure can be tougher than board exam prep."
-    ];
+  <hr>
 
-    function revealFact() {
-      const random = facts[Math.floor(Math.random() * facts.length)];
-      document.getElementById('quote').innerText = "-> " + random;
+  <h2>Small JS Test</h2>
+  <p>Testing a basic counter button in vanilla JavaScript:</p>
+  <button onclick="countUp()">Clicks: <span id="num">0</span></button>
+
+  <script>
+    let clicks = 0;
+    function countUp() {
+      clicks = clicks + 1;
+      document.getElementById("num").innerText = clicks;
     }
   </script>
 
