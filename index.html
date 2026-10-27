@@ -49,9 +49,23 @@
 
     button {
       margin-top: 10px;
-      padding: 6px 12px;
-      font-size: 13px;
+      padding: 8px 14px;
+      font-size: 14px;
+      font-weight: bold;
       cursor: pointer;
+      background-color: #ffdddd;
+      border: 1px solid #cc0000;
+      color: #990000;
+    }
+
+    button:hover {
+      background-color: #ffcccc;
+    }
+
+    #warning {
+      margin-top: 10px;
+      color: red;
+      font-weight: bold;
     }
   </style>
 </head>
@@ -78,15 +92,20 @@
 
   <hr>
 
-  <h2>Small JS Test</h2>
-  <p>Testing a basic counter button in vanilla JavaScript:</p>
-  <button onclick="countUp()">Clicks: <span id="num">0</span></button>
+  <h2>Random Button</h2>
+  <p>Seriously, leave this alone:</p>
+  <button onclick="playAudio()">DO NOT CLICK IT</button>
+  <p id="warning"></p>
+
+  <!-- Put your audio file (e.g. sound.mp3) in the same folder -->
+  <audio id="screamer" src="67_kid.mp3"></audio>
 
   <script>
-    let clicks = 0;
-    function countUp() {
-      clicks = clicks + 1;
-      document.getElementById("num").innerText = clicks;
+    function playAudio() {
+      let sound = document.getElementById("screamer");
+      sound.currentTime = 0;
+      sound.play();
+      document.getElementById("warning").innerText = "WHY DID YOU CLICK IT?!";
     }
   </script>
 
